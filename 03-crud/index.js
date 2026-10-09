@@ -1,5 +1,3 @@
-
-
 let tareas = [
   { id: 1, titulo: "Estudiar JavaScript", completada: false },
   { id: 2, titulo: "Hacer la tarea", completada: false },
@@ -32,20 +30,20 @@ function eliminarTarea(id) {
   return tareas.length < antes;
 }
 
-console.log("== CREATE ==");
+console.log("CREATE");
 console.log(crearTarea("Subir ejercicios a GitHub"));
 
-console.log("\n== READ (todas) ==");
+console.log("READ todas");
 console.log(leerTareas());
 
-console.log("\n== READ (id 2) ==");
+console.log("READ id 2");
 console.log(leerTareaPorId(2));
 
-console.log("\n== UPDATE (id 2 -> completada) ==");
+console.log("UPDATE id 2 completada");
 console.log(actualizarTarea(2, { completada: true }));
 
-console.log("\n== DELETE (id 1) ==");
-console.log("¿Eliminada?", eliminarTarea(1));
+console.log("DELETE id 1");
+console.log("Eliminada:", eliminarTarea(1));
 
-console.log("\n== Estado final ==");
+console.log("Estado final");
 console.log(leerTareas());
